@@ -35,7 +35,7 @@ def random_num_proxy(length):
         return int(num)
 
 def setup():
-    #23.106.28.66:29842 備胎
+    #23.106.28.66:29842
     proxy_list = ['23.105.4.190:29842','23.105.3.53:29842','23.81.56.35:29842','23.81.55.206:29842',
                   '23.106.28.87:29842','23.106.30.36:29842','23.105.4.238:29842','23.105.3.246:29842','23.81.56.192:29842',
                   '23.81.55.56:29842']
@@ -142,7 +142,6 @@ if __name__ == '__main__':
                         import_data.drop(line, inplace=True)
 
                 except:
-                    print('wtf')
                     import_data.drop(line, inplace=True)
             else:
                 import_data.drop(line, inplace=True)
@@ -151,7 +150,7 @@ if __name__ == '__main__':
 
         driver.quit()
 
-    import_data.insert(7, 'Amazon Price', price_list)
+    import_data.insert(1, 'Amazon Price', price_list)
     import_data = import_data.reset_index(drop=True)
 
     final_path = '/Users/jordanliu/Desktop/amazon_scrape.xlsx'
